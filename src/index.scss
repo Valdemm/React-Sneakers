@@ -91,35 +91,116 @@ header {
     width: 200px;
   }
 }
-h2 {
-  margin: 30px;
+
+.overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.1);
+  z-index: 1;
 }
 
+.drawer {
+  position: absolute;
+  width: 420px;
+  height: 100%;
+  right: 0;
+  background: #ffffff;
+  box-sizing: -10px 4px 24px rgba(0, 0, 0, 0.1);
+  padding-right: 20px;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+
+  h2 {
+    margin: 30px;
+  }
+}
 .cartTotalBlock {
-  li {
-    display: flex;
-    align-items: flex-end;
-    margin-bottom: 20px;
+  ul {
+    display: block;
+    margin-bottom: 40px !important;
+    li {
+      display: flex;
+      align-items: flex-end;
+      margin-bottom: 20px;
+      div {
+        flex: 1;
+        height: 1px;
+        border: 1px dashed #dfdfdf;
+        position: relative;
+        top: -4px;
+        margin: 0 10px;
+      }
+    }
   }
-  div {
-    flex: 1;
-    height: 1px;
-    border-bottom: 1px solid #dfdfdf;
+
+  .greenBtn {
     position: relative;
-    top: -4px;
-    margin: 0 7px;
+
+    &:hover {
+      img {
+        transform: translateX(5px);
+      }
+    }
+
+    img {
+      position: absolute;
+      right: 30px;
+      top: 20px;
+      transition: transform 0.2s ease-in-out;
+    }
   }
 }
-.cartItem {
-  margin-left: 20px;
-  border: 1px solid #f3f3f3;
-  border-radius: 20px;
-  overflow: hidden;
 
-  p {
-    font-size: 16px;
+.greenBtn {
+  width: 100%;
+  height: 55px;
+  background: #9dd558;
+  border-radius: 18px;
+  border: 0;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.1s ease-in-out;
+
+  &:hover {
+    background: lighten($color: #9dd558, $amount: 5%);
   }
-  b {
-    font-size: 14px;
+  &:active {
+    background: darken($color: #9dd558, $amount: 5%);
+  }
+}
+
+.items {
+  overflow: auto;
+  flex: auto;
+  margin-bottom: 40px;
+
+  .cartItem {
+    border: 1px solid #f3f3f3;
+    border-radius: 20px;
+    overflow: hidden;
+    padding: 20px;
+
+    p {
+      font-size: 16px;
+      margin: 0;
+    }
+    b {
+      font-size: 14px;
+    }
+    .remoteBtn {
+      opacity: 0.5;
+      cursor: pointer;
+      transition: opasity 0.15s ease-in-out;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
   }
 }

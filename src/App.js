@@ -1,7 +1,89 @@
 function App() {
   return (
     <div className="wrapper clear">
-      <div className="drawer"></div>
+      <div style={{ display: "none" }} className="overlay">
+        <div className="drawer">
+          <h2 className="d-flex justify-between mb-30 ">
+            Корзина
+            <img className="cu-p" src="/img/btn-no-remote.svg" alt="button" />
+          </h2>
+
+          <div className="items">
+            <div className="cartItem d-flex align-center mb-20">
+              <img
+                className="mr-20"
+                width={70}
+                height={70}
+                src="/img/sneakers/image 5 (5).jpg"
+                alt="Sneakers"
+              />
+              <div className="mr-20">
+                <p className="mb-5">Мужские Кроссовки Jordan Air Jordan 11</p>
+                <b>12 999 руб.</b>
+              </div>
+              <img
+                className="remoteBtn"
+                src="/img/btn-no-remote.svg"
+                alt="button"
+              />
+            </div>
+            <div className="cartItem d-flex align-center mb-20">
+              <img
+                className="mr-20"
+                width={70}
+                height={70}
+                src="/img/sneakers/image 5 (5).jpg"
+                alt="Sneakers"
+              />
+              <div className="mr-20">
+                <p className="mb-5">Мужские Кроссовки Jordan Air Jordan 11</p>
+                <b>12 999 руб.</b>
+              </div>
+              <img
+                className="remoteBtn"
+                src="/img/btn-no-remote.svg"
+                alt="button"
+              />
+            </div>
+            <div className="cartItem d-flex align-center mb-20">
+              <img
+                className="mr-20"
+                width={70}
+                height={70}
+                src="/img/sneakers/image 5 (5).jpg"
+                alt="Sneakers"
+              />
+              <div className="mr-20">
+                <p className="mb-5">Мужские Кроссовки Jordan Air Jordan 11</p>
+                <b>12 999 руб.</b>
+              </div>
+              <img
+                className="remoteBtn"
+                src="/img/btn-no-remote.svg"
+                alt="button"
+              />
+            </div>
+          </div>
+          <div className="cartTotalBlock">
+            <ul>
+              <li>
+                <span>Итого</span>
+                <div className="d-flex"></div>
+                <b>21 498 руб.</b>
+              </li>
+              <li>
+                <span>Налог 5%:</span>
+                <div className="d-flex"></div>
+                <b>1074 руб.</b>
+              </li>
+            </ul>
+            <button className="greenBtn">
+              Оформить заказ
+              <img src="/img/arrow.svg" alt="arrow" />
+            </button>
+          </div>
+        </div>
+      </div>
 
       <header className="d-flex justify-between align-center p-40">
         <div className="d-flex align-center">
@@ -52,12 +134,14 @@ function App() {
               </button>
             </div>
           </div>
-
           <div className="card">
+            <div className="favorite">
+              <img src="/img/heart-is-not-liked.svg" alt="Unliked" />
+            </div>
             <img
               width={133}
               height={112}
-              src="/img/sneakers/image 5 (1).jpg"
+              src="/img/sneakers/image 5 (9).jpg"
               alt="Sneakers"
             />
             <h5>Мужские Кроссовки Jordan Air Jordan 11 </h5>
@@ -72,6 +156,9 @@ function App() {
             </div>
           </div>
           <div className="card">
+            <div className="favorite">
+              <img src="/img/heart-is-not-liked.svg" alt="Unliked" />
+            </div>
             <img
               width={133}
               height={112}
@@ -90,10 +177,13 @@ function App() {
             </div>
           </div>
           <div className="card">
+            <div className="favorite">
+              <img src="/img/heart-is-not-liked.svg" alt="Unliked" />
+            </div>
             <img
               width={133}
               height={112}
-              src="/img/sneakers/image 5 (2).jpg"
+              src="/img/sneakers/image 5 (4).jpg"
               alt="Sneakers"
             />
             <h5>Мужские Кроссовки Jordan Air Jordan 11 </h5>
